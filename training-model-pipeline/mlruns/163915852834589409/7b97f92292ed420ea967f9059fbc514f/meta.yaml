@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/163915852834589409/7b97f92292ed420ea967f9059fbc514f/artifacts
+end_time: 1733903051066
+entry_point_name: ''
+experiment_id: '163915852834589409'
+lifecycle_stage: active
+run_id: 7b97f92292ed420ea967f9059fbc514f
+run_name: mercurial-finch-463
+run_uuid: 7b97f92292ed420ea967f9059fbc514f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733903049434
+status: 3
+tags: []
+user_id: x-raf

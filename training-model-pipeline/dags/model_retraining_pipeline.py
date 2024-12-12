@@ -24,28 +24,32 @@ dag = DAG(
 # Task 1: Data Collection and Validation
 data_collection = BashOperator(
     task_id='data_collection',
-    bash_command='python /opt/airflow/src/data/collect_data.py',
+    #bash_command='python /opt/airflow/src/data/collect_data.py',
+    bash_command='/home/x-raf/Projects/mlops/mlops-pipeline/training-model-pipeline/src/data/collect_data.py',
     dag=dag
 )
 
 # Task 2: Feature Engineering
 feature_engineering = BashOperator(
     task_id='feature_engineering',
-    bash_command='python /opt/airflow/src/features/build_features.py',
+    #bash_command='python /opt/airflow/src/features/build_features.py',
+    bash_command='/home/x-raf/Projects/mlops/mlops-pipeline/training-model-pipeline/src/features/build_features.py',
     dag=dag
 )
 
 # Task 3: Model Training
 model_training = BashOperator(
     task_id='model_training',
-    bash_command='python /opt/airflow/src/training/train_model.py',
+    #bash_command='python /opt/airflow/src/training/train_model.py',
+    bash_command='/home/x-raf/Projects/mlops/mlops-pipeline/training-model-pipeline/src/training/train_model.py',
     dag=dag
 )
 
 # Task 4: Model Evaluation
 model_evaluation = BashOperator(
     task_id='model_evaluation',
-    bash_command='python /opt/airflow/src/evaluation/evaluate_model.py',
+    #bash_command='python /opt/airflow/src/evaluation/evaluate_model.py',
+    bash_command='/home/x-raf/Projects/mlops/mlops-pipeline/training-model-pipeline/src/evaluation/evaluate_model.py',
     dag=dag
 )
 
