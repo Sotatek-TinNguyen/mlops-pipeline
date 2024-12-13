@@ -23,7 +23,7 @@ class ModelTrainer:
     def load_data(self):
         """Load the processed features."""
         try:
-            processed_dir = "data/processed"
+            processed_dir = "/home/x-raf/Projects/mlops/mlops-pipeline/training-model-pipeline/data/processed"
             files = os.listdir(processed_dir)
             latest_file = max(files, key=lambda x: os.path.getctime(os.path.join(processed_dir, x)))
             data_path = os.path.join(processed_dir, latest_file)

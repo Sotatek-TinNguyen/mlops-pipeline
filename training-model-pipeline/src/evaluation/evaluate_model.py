@@ -19,7 +19,7 @@ class ModelEvaluator:
     def load_test_data(self):
         """Load the test data."""
         try:
-            processed_dir = "data/processed"
+            processed_dir = "/home/x-raf/Projects/mlops/mlops-pipeline/training-model-pipeline/data/processed"
             files = os.listdir(processed_dir)
             latest_file = max(files, key=lambda x: os.path.getctime(os.path.join(processed_dir, x)))
             data_path = os.path.join(processed_dir, latest_file)
@@ -37,7 +37,7 @@ class ModelEvaluator:
     def load_model(self):
         """Load the latest trained model."""
         try:
-            models_dir = "models"
+            models_dir = "/home/x-raf/Projects/mlops/mlops-pipeline/training-model-pipeline/models"
             files = os.listdir(models_dir)
             latest_file = max(files, key=lambda x: os.path.getctime(os.path.join(models_dir, x)))
             model_path = os.path.join(models_dir, latest_file)

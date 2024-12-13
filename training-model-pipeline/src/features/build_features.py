@@ -17,7 +17,7 @@ class FeatureBuilder:
         """Load data from the latest raw data file."""
         try:
             # Get the latest file from raw data directory
-            raw_data_dir = "data/raw"
+            raw_data_dir = "/home/x-raf/Projects/mlops/mlops-pipeline/training-model-pipeline/data/raw"
             files = os.listdir(raw_data_dir)
             latest_file = max(files, key=lambda x: os.path.getctime(os.path.join(raw_data_dir, x)))
             data_path = os.path.join(raw_data_dir, latest_file)
@@ -74,7 +74,7 @@ def main():
         feature_builder = FeatureBuilder()
         
         # Load data
-        df = feature_builder.load_data("data/raw")
+        df = feature_builder.load_data("/home/x-raf/Projects/mlops/mlops-pipeline/training-model-pipeline/data/raw")
         
         # Create features
         df_processed = feature_builder.create_features(df)
